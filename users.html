@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пользователи — Виниловый рай</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header glass-panel">
+        <div class="logo"><i class="fa-solid fa-record-vinyl"></i>Виниловый рай</div>
+        <nav class="nav-links">
+            <a href="index.html">Главная</a>
+            <a href="about.html">О проекте</a>
+            <a href="gallery.html">Галерея</a>
+            <a href="users.html">Пользователи</a>
+            <a href="contacts.html">Контакты</a>
+            <a href="delivery.html">Доставка</a>
+            <a href="faq.html">FAQ</a>
+            <a href="sale.html">Акции</a>
+        </nav>
+        <div class="header-icons">
+            <button class="icon-btn theme-toggle" id="themeSwitcher">
+                <i class="fa-regular fa-sun"></i>
+            </button>
+        </div>
+    </div>
+
+    <main class="content-page">
+        <h1>Тестовые пользователи</h1>
+        <p>Данные для входа (демо-режим)</p>
+        <!-- Контейнер для динамической таблицы -->
+        <div id="usersTableContainer"></div>
+    </main>
+
+    <div class="toast-mini" id="toast"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

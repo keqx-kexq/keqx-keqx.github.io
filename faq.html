@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ — Виниловый рай</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header glass-panel">
+        <div class="logo"><i class="fa-solid fa-record-vinyl"></i>Виниловый рай</div>
+        <nav class="nav-links">
+            <a href="index.html">Главная</a>
+            <a href="about.html">О проекте</a>
+            <a href="gallery.html">Галерея</a>
+            <a href="contacts.html">Контакты</a>
+            <a href="delivery.html">Доставка</a>
+            <a href="faq.html">FAQ</a>
+            <a href="sale.html">Акции</a>
+        </nav>
+        <div class="search-bar">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="searchInput" placeholder="Поиск винила...">
+        </div>
+        <div class="header-icons">
+            <button class="icon-btn" id="cartPanelBtn">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span class="badge" id="cartBadge">0</span>
+            </button>
+            <button class="icon-btn" id="favoritesPanelBtn">
+                <i class="fa-regular fa-heart"></i>
+                <span class="badge" id="favBadge">0</span>
+            </button>
+            <button class="icon-btn theme-toggle" id="themeSwitcher">
+                <i class="fa-regular fa-sun"></i>
+            </button>
+            <button class="icon-btn" id="accountBtn"><i class="fa-regular fa-user"></i></button>
+        </div>
+    </div>
+
+    <main class="content-page">
+        <h1>Часто задаваемые вопросы</h1>
+        <dl>
+            <dt><strong>Как вернуть товар?</strong></dt>
+            <dd>В течение 14 дней с момента покупки, при сохранении товарного вида.</dd>
+            <dt><strong>Есть ли гарантия на винил?</strong></dt>
+            <dd>Да, мы проверяем каждую пластинку перед отправкой.</dd>
+            <dt><strong>Можно ли заказать альбом, которого нет в каталоге?</strong></dt>
+            <dd>Напишите нам, и мы постараемся найти его под заказ.</dd>
+        </dl>
+    </main>
+
+    <!-- Модальное окно авторизации -->
+    <div class="modal-overlay" id="authModal">
+        <div class="modal-content">
+            <button class="modal-close" id="authModalClose">×</button>
+            <div id="authModalContainer"></div>
+        </div>
+    </div>
+
+    <!-- Боковая панель корзины -->
+    <div class="side-panel" id="cartPanel">
+        <div class="panel-header">Корзина <button class="close-panel" id="closeCart">×</button></div>
+        <div class="panel-items" id="cartItemsList"></div>
+        <div class="panel-footer">
+            <div class="total-row"><span>Итого</span> <span id="cartTotal">0 ₽</span></div>
+            <button class="checkout-btn" id="checkoutBtn">Оформить · безопасно</button>
+        </div>
+    </div>
+
+    <!-- Боковая панель избранного -->
+    <div class="side-panel" id="favoritesPanel">
+        <div class="panel-header">Избранное <button class="close-panel" id="closeFav">×</button></div>
+        <div class="panel-items" id="favItemsList"></div>
+        <div class="panel-footer" style="border:none; text-align:center; color:var(--text-secondary);"><i class="fa-regular fa-star"></i> сохранено</div>
+    </div>
+
+    <!-- Оверлей -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Тост -->
+    <div class="toast-mini" id="toast"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
